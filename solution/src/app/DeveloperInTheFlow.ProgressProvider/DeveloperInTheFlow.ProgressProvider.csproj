@@ -1,66 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{699CAD0C-8A24-41F5-B114-2F152566DADD}</ProjectGuid>
+    <!-- Package Information -->
+    <PackageId>DeveloperInTheFlow.ProgressProvider</PackageId>
+    <Version>1.0.18.5</Version>
+    <Title>DeveloperInTheFlow.ProgressProvider</Title>
+    <Description>Provides a hierarchical implementation of the System.IProgress&lt;T&gt; interface, allowing for more complex scenarios with multiple parallel operations being reported.</Description>
+    <Authors>Pedro Pombeiro</Authors>
+    <Owners>Pedro Pombeiro</Owners>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>IProgress;TPL</PackageTags>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Now targets netstandard2.0 for cross-platform support.</PackageReleaseNotes>
+    <Copyright>Copyright © Pedro Pombeiro 2013-2015</Copyright>
+
+    <!-- Assembly Information -->
+    <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DeveloperInTheFlow.ProgressProvider</RootNamespace>
     <AssemblyName>DeveloperInTheFlow.ProgressProvider</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <RootNamespace>DeveloperInTheFlow.ProgressProvider</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AssemblyVersion>1.0.18</AssemblyVersion>
+    <FileVersion>1.0.18.5</FileVersion>
+    <InformationalVersion>1.0.18</InformationalVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\DeveloperInTheFlow.ProgressProvider.Net40\Properties\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="HierarchicalProgress.cs" />
-    <Compile Include="HierarchicalProgressBase.cs" />
-    <Compile Include="IHierarchicalProgress.cs" />
-    <Compile Include="IProgressProvider.cs" />
-    <Compile Include="IProgressReport.generic.cs" />
-    <Compile Include="IProgressReportFactory.cs" />
-    <Compile Include="MessageHelper.cs" />
-    <Compile Include="ProgressExtensions.cs" />
-    <Compile Include="ProgressInfo.cs" />
-    <Compile Include="ProgressProviderBase.generic.cs" />
-    <Compile Include="ProgressReport.generic.cs" />
-    <Compile Include="ProgressState.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
